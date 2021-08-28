@@ -69,9 +69,13 @@ export const deleteTasks = (_ids) => {
 export const updateTodo = ({ id, todo }) => {
   return new Promise((resolve, reject) => {
     TicketListSchema.findByIdAndUpdate(
-      id, { todo }
+      id, { todo, }, {
+        new: true,
+
+    }
     )
-  }).then(result => resolve(result)).catch(error => reject(error))
+      .then((result) => resolve(result)).catch(error => reject(error))
+  })
 }
 //mark as to do
 
