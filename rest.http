@@ -1,0 +1,30 @@
+# List of the api and their request
+
+### fetch all the tickets
+GET http://localhost:8000/api/v1/
+
+### add new tickets
+POST http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+   "task": "learning",
+    "hr": 50
+}
+
+### update tickets
+PATCH http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+    "id":"61297a8ea3e817856c3aef71",
+    "todo":false
+}
+
+### delet tickets
+DELETE http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+   "id": ["6129827df358115eba880a17"]   
+}
